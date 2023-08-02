@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="../assets/images/icon.png" type="image/x-icon">
+  <!--CSS-->
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Sobre Nosotros - Kinetoscope</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html"><img src="../assets/images/logo.png" alt="logo empresa" class="logo-nav"></a>
+            </li>
+            <li>
+                <a href="./mi_lista.html" class="estilo-links">Mi lista</a>
+            </li>
+            <li>
+                <a href="./peliculas.html" class="estilo-links">Películas</a>
+            </li>
+            <li>
+                <a href="./series.html" class="estilo-links">Series</a>
+            </li>
+            <li>
+                <a href="#" class="estilo-links">Sobre Nosotros</a>
+            </li>
+            <li>
+                <input type="search" placeholder="Buscar">
+            </li>
+            <li>
+                <button>Iniciar Sesión</button>
+            </li>
+            <li>
+                <button>Registrarse</button>
+            </li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+        <div>
+            <h2>Acerca de Kinetoscope</h2>
+            <p>Nuestra misión es brindar a los amantes del cine 
+            y las series una experiencia de streaming inigualable. 
+            Nos esforzamos por ofrecer un catálogo diverso y 
+            de alta calidad, junto con  una plataforma intuitiva 
+            y accesible para que puedas disfrutar de tus
+            contenidos favoritos en cualquier momento y lugar.
+            </p>
+            <!--img src="acerca_nosotos" alt="Acerca de Nosotros"-->
+        </div>
+        <div>
+            <h2>Valores y Compromisos</h2>
+            <p>En nuestra plataforma, nos guiamos por valores como la 
+            excelencia, la diversidad y la satisfacción del cliente. 
+            Nos comprometemos a ofrecer contenido de primera calidad, 
+            fomentar la inclusión y escuchar activamente las 
+            necesidades y sugerencias de nuestra comunidad de usuarios.
+            </p>
+            <!--img src="acerca_nosotos" alt="Acerca de Nosotros"-->
+        </div>
+    </article>
+    <form action="procesar.php" method="post">
+        <h2>Formulario</h2>
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre">
+      </div>
+
+      <div>
+      <label for="apellido">Apellido:</label>
+      <input type="text" name="apellido">
+      </div>
+      
+      <div>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" name="email">
+      </div>
+      
+      <h3>¿Que películas o series te gustaria que se añadieran?</h3>
+      <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
+
+      <h3>Opinión de la pagína web</h3>
+      <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Borrar Formulario</button>
+
+    </form>
+  </main>
+
+  <footer>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="estilo-foo">FAQ</a>
+            </li>
+            <li>
+                <a href="#" class="estilo-foo">Centro de Ayuda</a>
+            </li>
+            <li>
+                <a href="#" class="estilo-foo">Terminos de uso</a>
+            </li>
+            <li>
+                <a class="estilo-foo">KINETOSCOPE</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com"><img src="../assets/images/facebook.png" alt="logo facebook" class="logo-foo"></a>
+            </li>
+            <li>
+                <a href="https://www.twitter.com"><img src="../assets/images/twitter.png" alt="logo twitter" class="logo-foo"></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/"><img src="../assets/images/instagram.jpg" alt="logo instagram" class="logo-foo"></a>
+            </li>
+            <li>
+                <a href="https://web.whatsapp.com/"><img src="../assets/images/whatsapp.png" alt="logo whatsapp" class="logo-foo"></a>
+            </li>
+            <li>
+                <a class="estilo-foo">© 2023 KINETOSCOPE</a>
+            </li>
+        </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>
