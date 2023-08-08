@@ -11,8 +11,8 @@
   <title>Kinetoscope</title>
 </head>
 
-<body> 
-    <div id="grid">
+<body>
+    <div class="grid_layout">
         <header>
             <nav>
                 <ul>
@@ -32,29 +32,19 @@
                         <a href="./paginas/sobre_nosotros.html" class="estilo-links">Sobre Nosotros</a>
                     </li>
                     <li>
-                        <input type="search" placeholder="Buscar">
+                        <input type="search"  class="buscador" placeholder="Buscar">
                     </li>
                     <li>
-                        <button>Iniciar Sesión</button>
+                        <button class="botones">Iniciar Sesión</button>
                     </li>
                     <li>
-                        <button>Registrarse</button>
+                        <button class="botones">Registrarse</button>
                     </li>
                 </ul>
             </nav>
         </header>
 
-        <main>
-            <h1>Estrenos</h1>
-        </main>
-
-        <section>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MVvGSBKV504" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <p>J. Robert Oppenheimer es una de las figuras icónicas del siglo XX, un físico brillante que lideró  los esfuerzos por construir 
-                la bomba atómica para su país en tiempos de guerra, y que luego se enfrentado a las consecuencias morales del... +</p>
-        </section>
-
-        <aside>
+        <aside class="lista_categorias">
             <h1>Categorías</h1>
             <ul>
                 <li>
@@ -98,7 +88,14 @@
                 </li>
             </ul>
         </aside>
-
+    
+        <section class="estrenos">
+            <h1 class="titulo_estrenos">Estrenos</h1>
+            <iframe width="990" height="380" src="https://www.youtube.com/embed/MVvGSBKV504" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p class="descripcion_estrenos">J. Robert Oppenheimer es una de las figuras icónicas del siglo XX, un físico brillante que lideró  los esfuerzos por construir 
+            la bomba atómica para su país en tiempos de guerra, y que luego se enfrentado a las consecuencias morales del... +</p>
+        </section>
+    
         <footer>
             <nav>
                 <ul>

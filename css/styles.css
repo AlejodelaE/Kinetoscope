@@ -15,13 +15,23 @@ body {
     position: relative;
   }
 
-#grid {
-    
+.grid_layout {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+    "header header"
+    "aside section"
+    "aside section"
+    "footer footer";
+    grid-template-columns: 20% auto;
+    grid-gap: 35px;
 }
 
 header {
     background-color: #1B18B7;
     background-size: auto;
+    padding: 5px;
+    grid-area: header;
   }
 
 .logo-nav {
@@ -45,6 +55,24 @@ header ul, footer ul{
     border-radius: 50px;
 }
 
+/***** Pseudoclases *****/
+a:link {
+    color: #d00000;
+} /*Enlaces no visitados*/
+
+a:visited {
+    color: #70e000;
+} /*Enlaces visitados*/
+
+a:hover {
+    color: #9d4edd;
+} /*El usuario esta sobre el enlace*/
+
+a:active {
+    color: #ff9e00;
+} /*Enlaces activo  que cambiará a color mientras se hace clic en él*/
+/***** Pseudoclases End Section *****/
+
 nav button {
     border: solid 10px black;
     outline: 0;
@@ -55,10 +83,46 @@ nav button {
     cursor: pointer;
 }
 
+aside {
+    grid-area: aside;
+}
+
+.lista_categorias {
+    width: 95%;
+    background-color: #FFFFFF;
+    color: #000000;
+    margin-left: 40px;
+}
+
+section {
+    grid-area: section;
+}
+
+.estrenos {
+    width: 87%;
+    display: flex;
+    background-color: #000000;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px ;
+    margin-right: 40px;
+}
+
+.titulo_estrenos {
+    padding: 5px;
+    color: crimson;
+}
+
+.descripcion_estrenos {
+    padding: 5px;
+}
+
 footer {
     list-style: none;
     background-color: black;
     background-size: auto;
+    padding: 15px;
+    grid-area: footer;
 }
 
 .logo-foo {
@@ -69,4 +133,36 @@ footer {
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+    .grid_layout {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "aside"
+        "section"
+        "footer";
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
+
+    .logo-nav {
+        width: 35%;
+    }
+
+    .estilo-links {
+        font-size: 10px;
+    }
+
+    .buscador {
+        width: 10px;
+    }
+
+    .botones {
+        font-size: small;
+        width: 20px;
+    }
+
+
 }
