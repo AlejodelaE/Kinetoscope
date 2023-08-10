@@ -24,6 +24,25 @@ body {
     "aside section"
     "footer footer";
     grid-template-columns: 20% auto;
+    grid-template-rows: 10% auto 10%;
+    grid-gap: 35px;
+}
+
+/* Al visualizar la pagina el grid_layout2 se ve así
+    "header header"
+    "aside peli_seri1"
+    "aside peli_seri2"
+    "footer footer";
+no entiendo porque
+*/
+.grid_layout2 {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+    "header header"
+    "aside peli_seri1"
+    "peli_seri2 peli_seri2"
+    "footer footer";
     grid-gap: 35px;
 }
 
@@ -87,6 +106,55 @@ aside {
     grid-area: aside;
 }
 
+.peli_seri1 {
+    grid-area: peli_seri1
+}
+
+.peli_seri2 {
+    grid-area: peli_seri2
+}
+
+.cowboy_bebop {
+    height: 450px;
+    width: 300px;
+}
+
+.back_future {
+    height: 450px;
+    width: 300px;
+}
+
+.castlevania {
+    height: 450px;
+    width: 300px;
+}
+
+.sherk2 {
+    height: 450px;
+    width: 300px;
+}
+
+.gotg3 {
+    height: 450px;
+    width: 300px;
+}
+
+.breaking_bad {
+    height: 450px;
+    width: 300px;
+}
+
+.tronlegacy {
+    height: 450px;
+    width: 300px;
+}
+
+.lista_ordenar {
+    background-color: #FFFFFF;
+    color: #000000;
+    margin-left: 40px;
+}
+
 .lista_categorias {
     width: 95%;
     background-color: #FFFFFF;
@@ -111,10 +179,11 @@ section {
 .titulo_estrenos {
     padding: 5px;
     color: crimson;
+    font-weight: bold;
 }
 
 .descripcion_estrenos {
-    padding: 5px;
+    padding: 10px;
 }
 
 footer {
