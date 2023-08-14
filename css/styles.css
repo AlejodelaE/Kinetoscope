@@ -12,6 +12,8 @@ body {
     color: #FFFFFF;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     position: relative;
   }
 
@@ -21,11 +23,10 @@ body {
     grid-template-areas:
     "header header"
     "aside section"
-    "aside section"
     "footer footer";
     grid-template-columns: 20% auto;
-    grid-template-rows: 10% auto 10%;
-    grid-gap: 35px;
+    grid-template-rows: 10% auto auto%;
+    grid-gap: 40px;
 }
 
 /* Al visualizar la pagina el grid_layout2 se ve así
@@ -47,9 +48,6 @@ no entiendo porque
 }
 
 header {
-    background-color: #1B18B7;
-    background-size: auto;
-    padding: 5px;
     grid-area: header;
   }
 
@@ -64,14 +62,23 @@ header ul, footer ul{
     align-items: center;
 }
 
+
+
 .estilo-links {
-    background-color: black;
+    font-size: large;
     text-decoration: none;
-    border: solid 10px black;
     outline: 0;
     color: white;
     font-weight: bold;
-    border-radius: 50px;
+}
+
+.navbar-brand {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.nav-item {
+    margin-left: 60px;
 }
 
 /***** Pseudoclases *****/
@@ -104,6 +111,16 @@ nav button {
 
 aside {
     grid-area: aside;
+}
+
+.dropdown-menu {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.categoria {
+    text-decoration: none;
+    outline: 0;
 }
 
 .peli_seri1 {
@@ -156,10 +173,8 @@ aside {
 }
 
 .lista_categorias {
-    width: 95%;
-    background-color: #FFFFFF;
-    color: #000000;
     margin-left: 40px;
+    width: 400px;
 }
 
 section {
@@ -169,10 +184,9 @@ section {
 .estrenos {
     width: 87%;
     display: flex;
-    background-color: #000000;
     flex-direction: column;
     align-items: center;
-    margin-left: 50px ;
+    margin-left: 100px ;
     margin-right: 40px;
 }
 
@@ -182,15 +196,7 @@ section {
     font-weight: bold;
 }
 
-.descripcion_estrenos {
-    padding: 10px;
-}
-
 footer {
-    list-style: none;
-    background-color: black;
-    background-size: auto;
-    padding: 15px;
     grid-area: footer;
 }
 
@@ -202,36 +208,4 @@ footer {
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bold;
-}
-
-@media screen and (max-width: 480px) {
-    .grid_layout {
-        display: grid;
-        grid-template-areas:
-        "header"
-        "aside"
-        "section"
-        "footer";
-        grid-template-rows: auto;
-        grid-template-columns: 100%;
-    }
-
-    .logo-nav {
-        width: 35%;
-    }
-
-    .estilo-links {
-        font-size: 10px;
-    }
-
-    .buscador {
-        width: 10px;
-    }
-
-    .botones {
-        font-size: small;
-        width: 20px;
-    }
-
-
 }

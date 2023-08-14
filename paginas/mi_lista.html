@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--Favicon-->
   <link rel="shortcut icon" href="../assets/images/icon.png" type="image/x-icon">
+  <!--Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <!--CSS-->
   <link rel="stylesheet" href="../css/styles.css">
   <title>Mi lista - Kinetoscope</title>
@@ -14,64 +16,77 @@
 <body>
     <div class="grid_layout2">
         <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../index.html"><img src="../assets/images/logo.png" alt="logo empresa" class="logo-nav"></a>
-                    </li>
-                    <li>
-                        <a href="#" class="estilo-links">Mi lista</a>
-                    </li>
-                    <li>
-                        <a href="./peliculas.html" class="estilo-links">Películas</a>
-                    </li>
-                    <li>
-                        <a href="./series.html" class="estilo-links">Series</a>
-                    </li>
-                    <li>
-                        <a href="./sobre_nosotros.html" class="estilo-links">Sobre Nosotros</a>
-                    </li>
-                    <li>
-                        <input type="search" placeholder="Buscar">
-                    </li>
-                    <li>
-                        <button>Iniciar Sesión</button>
-                    </li>
-                    <li>
-                        <button>Registrarse</button>
-                    </li>
-                </ul>
+            <nav class="navbar navbar-expand-lg bg-black">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-light" href="#">
+                        <img src="../assets/images/logo2.png" alt="Logo" width="70" height="64" class="d-inline-block align-text-center">
+                        KINETOSCOPE
+                    </a>
+                    <button class="navbar-toggler btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon btn btn-light btn-lg"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href="../index.html" class="estilo-links">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="estilo-links">Mi lista</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./peliculas.html" class="estilo-links">Películas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./series.html" class="estilo-links">Series</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./sobre_nosotros.html" class="estilo-links">Sobre Nosotros</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-primary" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
             </nav>
         </header>
-        
-        <aside class="lista_ordenar">
-            <h1>Ordenar por</h1>
-            <ul>
-                <li>
-                    <p class="categoria">Titulos sugeridos</p>
-                </li>
-                <li>
-                    <p class="categoria">A-Z</p>
-                </li>
-                <li>
-                    <p class="categoria">Sin empezar</p>
-                </li>
-                <li>
-                    <p class="categoria">Empezados</p>
-                </li>
-                <li>
-                    <p class="categoria">Series</p>
-                </li>
-                <li>
-                    <p class="categoria">Películas</p>
-                </li>
-                <li>
-                    <p class="categoria">Fecha en que se agrego a la lista</p>
-                </li>
-                <li>
-                    <p class="categoria">Fecha de lanzamiento</p>
-                </li>
-            </ul>
+
+        <aside class="lista_categorias">
+            <div class="d-grid gap-2 dropdown-center">
+                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ordenar por
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="categoria">Titulos sugeridos</a>
+                    </li>
+                    <li>
+                        <a class="categoria">A-Z</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Sin empezar</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Empezados</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Series</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Películas</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Fantasía</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Fecha en que se agrego a la lista</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Fecha de lanzamiento</a>
+                    </li>
+                </ul>
+            </div>
         </aside>
 
         <main>
@@ -88,39 +103,76 @@
             </div>
         </main>
         
-        <footer>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#" class="estilo-foo">FAQ</a>
-                    </li>
-                    <li>
-                        <a href="#" class="estilo-foo">Centro de Ayuda</a>
-                    </li>
-                    <li>
-                        <a href="#" class="estilo-foo">Terminos de uso</a>
-                    </li>
-                    <li>
-                        <a class="estilo-foo">KINETOSCOPE</a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com"><img src="../assets/images/facebook.png" alt="logo facebook" class="logo-foo"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.twitter.com"><img src="../assets/images/twitter.png" alt="logo twitter" class="logo-foo"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/"><img src="../assets/images/instagram.jpg" alt="logo instagram" class="logo-foo"></a>
-                    </li>
-                    <li>
-                        <a href="https://web.whatsapp.com/"><img src="../assets/images/whatsapp.png" alt="logo whatsapp" class="logo-foo"></a>
-                    </li>
-                    <li>
-                        <a class="estilo-foo">© 2023 KINETOSCOPE</a>
-                    </li>
-                </ul>
-            </nav>
+        <footer class="text-center text-white" style="background-color: #3f51b5">
+            <div class="container">
+                <section class="mt-5">
+                    <div class="row text-center d-flex justify-content-center pt-5">
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">About us</a>
+                            </h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Products</a>
+                            </h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Awards</a>
+                            </h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Help</a>
+                            </h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Contact</a>
+                            </h6>
+                        </div>
+                    </div>
+                </section>
+                <hr class="my-5" />
+                <section class="mb-5">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                                distinctio earum repellat quaerat voluptatibus placeat nam,
+                                commodi optio pariatur est quia magnam eum harum corrupti
+                                dicta, aliquam sequi voluptate quas.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="text-center mb-5">
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </section>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">© 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
