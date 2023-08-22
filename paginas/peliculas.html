@@ -2,135 +2,183 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Favicon-->
-  <link rel="shortcut icon" href="../assets/images/icon.png" type="image/x-icon">
-  <!--CSS-->
-  <link rel="stylesheet" href="../css/styles.css">
-  <title>Peliculas - Kinetoscope</title>
+    <title>Kinetoscope - ¡Bienvenido a nuestra plataforma de streaming de entretenimiento!</title>
+    <meta charset="UTF-8">
+    <meta name="description=" content="Sumérgete en un mundo de emocionantes películas, series y documentales en nuestra página web, diseñada para ofrecerte una experiencia de entretenimiento sin igual.">
+    <meta name="keywords" content="Plateforma de streaming, Películas, Series, Catalogo, Maraton, Ver en línea, Contenido variado">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../assets/images/icon.png" type="image/x-icon">
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Peliculas - Kinetoscope</title>
 </head>
 
 <body>
-  <header>
-    <nav>
-        <ul>
-            <li>
-                <a href="../index.html"><img src="../assets/images/logo.png" alt="logo empresa" class="logo-nav"></a>
-            </li>
-            <li>
-                <a href="./mi_lista.html" class="estilo-links">Mi lista</a>
-            </li>
-            <li>
-                <a href="#" class="estilo-links">Películas</a>
-            </li>
-            <li>
-                <a href="./series.html" class="estilo-links">Series</a>
-            </li>
-            <li>
-                <a href="./sobre_nosotros.html" class="estilo-links">Sobre Nosotros</a>
-            </li>
-            <li>
-                <input type="search" placeholder="Buscar">
-            </li>
-            <li>
-                <button>Iniciar Sesión</button>
-            </li>
-            <li>
-                <button>Registrarse</button>
-            </li>
-        </ul>
-    </nav>
-  </header>
+    <div class="grid_layout2">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-black">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-light" href="#">
+                        <img src="../assets/images/logo2.png" alt="Logo" width="70" height="64" class="d-inline-block align-text-center">
+                        KINETOSCOPE
+                    </a>
+                    <button class="navbar-toggler btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon btn btn-light btn-lg"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href="../index.html" class="estilo-links">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./mi_lista.html" class="estilo-links">Mi lista</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="estilo-links">Películas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./series.html" class="estilo-links">Series</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./sobre_nosotros.html" class="estilo-links">Sobre Nosotros</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-primary" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-  <main>
-    <!--img class="pelicula-serie" src="back_future.png"-->
-    <!--img class="pelicula-serie" src="sherk2.png"-->
-    <!--img class="pelicula-serie" src="gotg3.png"-->
-    <!--img class="pelicula-serie" src="jonhwick4.png"-->
-    <!--img class="pelicula-serie" src="avatar2.png"-->
-    <!--img class="pelicula-serie" src="godfather.png"-->
-    <!--img class="pelicula-serie" src="terminator2.png"-->
-  </main>
+        <aside class="lista_categorias">
+            <div class="d-grid gap-2 dropdown-center">
+                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Categorías
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="categoria">Acción</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Animación</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Aventura</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Ciencia Ficción</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Comedia</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Drama</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Fantasía</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Musical</a>
+                    </li>
+                    <li>
+                        <a class="categoria">Suspenso</a>
+                    </li><li>
+                        <a class="categoria">Terror</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
 
-  <aside class="lista_categorias">
-    <h1>Categorías</h1>
-    <ul>
-        <li>
-            <p class="categoria">Acción</p>
-        </li>
-        <li>
-            <p class="categoria">Animación</p>
-        </li>
-        <li>
-            <p class="categoria">Aventura</p>
-        </li>
-        <li>
-            <p class="categoria">Ciencia Ficción</p>
-        </li>
-        <li>
-            <p class="categoria">Comedia</p>
-        </li>
-        <li>
-            <p class="categoria">Drama</p>
-        </li>
-        <li>
-            <p class="categoria">Fantasía</p>
-        </li>
-        <li>
-            <p class="categoria">Musical</p>
-        </li>
-        <li>
-            <p class="categoria">Suspenso</p>
-        </li>
-        <li>
-            <p class="categoria">Terror</p>
-        </li>
-        <li>
-            <p class="categoria">Cine Mudo</p>
-        </li>
-        <li>
-            <p class="categoria">Cine 2D</p>
-        </li>
-        <li>
-            <p class="categoria">Cine 3D</p>
-        </li>
-    </ul>
-</aside>
+        <main>
+            <div class="peli_seri1">
+                <img class="poster" src="../assets/images/back_future.jpg">
+                <img class="poster" src="../assets/images/sherk2.jpg">
+                <img class="poster" src="../assets/images/gotg3.jpg">
+            </div>
+            <div class="peli_seri2">
+                <img class="poster" src="../assets/images/jonhwick4.jpg">
+                <img class="poster" src="../assets/images/avatar2.jpg">
+                <img class="poster" src="../assets/images/godfather.jpg">
+                <img class="poster" src="../assets/images/HP6.jpg">
+            </div>
+        </main>
 
-<footer>
-    <nav>
-        <ul>
-            <li>
-                <a href="#" class="estilo-foo">FAQ</a>
-            </li>
-            <li>
-                <a href="#" class="estilo-foo">Centro de Ayuda</a>
-            </li>
-            <li>
-                <a href="#" class="estilo-foo">Terminos de uso</a>
-            </li>
-            <li>
-                <a class="estilo-foo">KINETOSCOPE</a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com"><img src="../assets/images/facebook.png" alt="logo facebook" class="logo-foo"></a>
-            </li>
-            <li>
-                <a href="https://www.twitter.com"><img src="../assets/images/twitter.png" alt="logo twitter" class="logo-foo"></a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/"><img src="../assets/images/instagram.jpg" alt="logo instagram" class="logo-foo"></a>
-            </li>
-            <li>
-                <a href="https://web.whatsapp.com/"><img src="../assets/images/whatsapp.png" alt="logo whatsapp" class="logo-foo"></a>
-            </li>
-            <li>
-                <a class="estilo-foo">© 2023 KINETOSCOPE</a>
-            </li>
-        </ul>
-    </nav>
-  </footer>
-
+        <footer class="text-center text-white" style="background-color: #240952">
+            <div class="container">
+                <section class="mt-5">
+                    <div class="row text-center d-flex justify-content-center pt-5">
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">FAQ</a>
+                            </h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Privacidad</a>
+                            </h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Terminos de uso</a>
+                            </h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Centro de ayuda</a>
+                            </h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Contactenos</a>
+                            </h6>
+                        </div>
+                    </div>
+                </section>
+                <hr class="my-5" />
+                <section class="mb-5">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                            <p>
+                                Nuestra misión es brindar a los amantes del cine y las series una experiencia de streaming inigualable. 
+                                Nos esforzamos por ofrecer un catálogo diverso y de alta calidad, junto con una plataforma intuitiva 
+                                y accesible para que puedas disfrutar de tus contenidos favoritos en cualquier momento y lugar.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="text-center mb-5">
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </section>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">© 2023 Copyright:
+                <a class="text-white">Kinetoscope.com</a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,32 +1,30 @@
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
 
 body {
-    width: 100%;
-    height: 100vh;
-    background-image: url(../assets/images/cinta.png);
-    color: #FFFFFF;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-  }
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/images/cinta.png);
+  color: #FFFFFF;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
 
 .grid_layout {
-    display: grid;
-    width: 100%;
-    grid-template-areas:
-    "header header"
-    "aside section"
-    "footer footer";
-    grid-template-columns: 20% auto;
-    grid-template-rows: 10% auto auto%;
-    grid-gap: 40px;
+  display: grid;
+  width: 100%;
+  grid-template-areas: "header header" "aside section" "footer footer";
+  grid-template-columns: 20% auto;
+  grid-template-rows: 10% auto auto;
+  grid-gap: 35px;
 }
 
 /* Al visualizar la pagina el grid_layout2 se ve así
@@ -37,175 +35,119 @@ body {
 no entiendo porque
 */
 .grid_layout2 {
-    display: grid;
-    width: 100%;
-    grid-template-areas:
-    "header header"
-    "aside peli_seri1"
-    "peli_seri2 peli_seri2"
-    "footer footer";
-    grid-gap: 35px;
+  display: grid;
+  width: 100%;
+  grid-template-areas: "header header" "aside peli_seri1" "peli_seri2 peli_seri2" "footer footer";
+  grid-gap: 35px;
 }
 
 header {
-    grid-area: header;
-  }
+  grid-area: header;
+}
 
 .logo-nav {
-    height: 75px;
+  height: 75px;
 }
-
-header ul, footer ul{
-    display:flex;
-    list-style: none;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-
 
 .estilo-links {
-    font-size: large;
-    text-decoration: none;
-    outline: 0;
-    color: white;
-    font-weight: bold;
+  font-size: large;
+  text-decoration: none;
+  outline: 0;
+  color: white;
+  font-weight: bold;
 }
 
 .navbar-brand {
-    font-size: xx-large;
-    font-weight: bolder;
+  font-size: xx-large;
+  font-weight: bolder;
 }
 
 .nav-item {
-    margin-left: 60px;
+  margin-left: 60px;
 }
 
 /***** Pseudoclases *****/
 a:link {
-    color: #d00000;
+  color: #d00000;
 } /*Enlaces no visitados*/
-
 a:visited {
-    color: #70e000;
+  color: #70e000;
 } /*Enlaces visitados*/
-
 a:hover {
-    color: #9d4edd;
+  color: #9d4edd;
 } /*El usuario esta sobre el enlace*/
-
 a:active {
-    color: #ff9e00;
+  color: #ff9e00;
 } /*Enlaces activo  que cambiará a color mientras se hace clic en él*/
 /***** Pseudoclases End Section *****/
-
-nav button {
-    border: solid 10px black;
-    outline: 0;
-    background: #000000;
-    color: #FFFFFF;
-    font-weight: bold;
-    border-radius: 2px;
-    cursor: pointer;
-}
-
 aside {
-    grid-area: aside;
+  grid-area: aside;
 }
 
 .dropdown-menu {
-    font-size: large;
-    font-weight: bolder;
+  font-size: large;
+  font-weight: bolder;
 }
 
 .categoria {
-    text-decoration: none;
-    outline: 0;
+  text-decoration: none;
+  outline: 0;
 }
 
 .peli_seri1 {
-    grid-area: peli_seri1
+  grid-area: peli_seri1;
 }
 
 .peli_seri2 {
-    grid-area: peli_seri2
+  grid-area: peli_seri2;
 }
 
-.cowboy_bebop {
-    height: 450px;
-    width: 300px;
-}
-
-.back_future {
-    height: 450px;
-    width: 300px;
-}
-
-.castlevania {
-    height: 450px;
-    width: 300px;
-}
-
-.sherk2 {
-    height: 450px;
-    width: 300px;
-}
-
-.gotg3 {
-    height: 450px;
-    width: 300px;
-}
-
-.breaking_bad {
-    height: 450px;
-    width: 300px;
-}
-
-.tronlegacy {
-    height: 450px;
-    width: 300px;
-}
-
-.lista_ordenar {
-    background-color: #FFFFFF;
-    color: #000000;
-    margin-left: 40px;
+.poster {
+  height: 450px;
+  width: 300px;
 }
 
 .lista_categorias {
-    margin-left: 40px;
-    width: 400px;
+  margin-left: 40px;
+  width: 400px;
 }
 
 section {
-    grid-area: section;
+  grid-area: section;
 }
 
 .estrenos {
-    width: 87%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 100px ;
-    margin-right: 40px;
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 40px;
 }
 
 .titulo_estrenos {
-    padding: 5px;
-    color: crimson;
-    font-weight: bold;
+  padding: 5px;
+  color: crimson;
+  font-weight: bold;
 }
 
 footer {
-    grid-area: footer;
+  grid-area: footer;
 }
 
-.logo-foo {
-    height: 50px;
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
-.estilo-foo {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-weight: bold;
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
