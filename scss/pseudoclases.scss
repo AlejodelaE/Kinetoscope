@@ -1,0 +1,19 @@
+li {
+    /***** Pseudoclases *****/
+    a:link {
+        color: #d00000;
+    } /*Enlaces no visitados*/
+
+    a:visited {
+        color: #70e000;
+    } /*Enlaces visitados*/
+
+    a:hover {
+        color: #9d4edd;
+    } /*El usuario esta sobre el enlace*/
+
+    a:active {
+        color: #ff9e00;
+    } /*Enlaces activo  que cambiará a color mientras se hace clic en él*/
+    /***** Pseudoclases End Section *****/
+}

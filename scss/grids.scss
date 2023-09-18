@@ -1,0 +1,38 @@
+.grid_layout {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+    "header header"
+    "aside section"
+    "footer footer";
+    grid-template-columns: 20% auto;
+    grid-template-rows: 10% auto auto;
+    grid-gap: 35px;
+}
+
+/* Al visualizar la pagina el grid_layout2 se ve así
+    "header header"
+    "aside peli_seri1"
+    "aside peli_seri2"
+    "footer footer";
+no entiendo porque
+*/
+.grid_layout2 {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+    "header header"
+    "aside peli_seri1"
+    "peli_seri2 peli_seri2"
+    "footer footer";
+    grid-gap: 35px;
+}
+
+.grid_layout3 {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}

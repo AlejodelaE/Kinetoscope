@@ -17,36 +17,6 @@ body {
     position: relative;
 }
 
-.grid_layout {
-    display: grid;
-    width: 100%;
-    grid-template-areas:
-    "header header"
-    "aside section"
-    "footer footer";
-    grid-template-columns: 20% auto;
-    grid-template-rows: 10% auto auto;
-    grid-gap: 35px;
-}
-
-/* Al visualizar la pagina el grid_layout2 se ve así
-    "header header"
-    "aside peli_seri1"
-    "aside peli_seri2"
-    "footer footer";
-no entiendo porque
-*/
-.grid_layout2 {
-    display: grid;
-    width: 100%;
-    grid-template-areas:
-    "header header"
-    "aside peli_seri1"
-    "peli_seri2 peli_seri2"
-    "footer footer";
-    grid-gap: 35px;
-}
-
 header {
     grid-area: header;
 }
@@ -71,24 +41,6 @@ header {
 .nav-item {
     margin-left: 60px;
 }
-
-/***** Pseudoclases *****/
-a:link {
-    color: #d00000;
-} /*Enlaces no visitados*/
-
-a:visited {
-    color: #70e000;
-} /*Enlaces visitados*/
-
-a:hover {
-    color: #9d4edd;
-} /*El usuario esta sobre el enlace*/
-
-a:active {
-    color: #ff9e00;
-} /*Enlaces activo  que cambiará a color mientras se hace clic en él*/
-/***** Pseudoclases End Section *****/
 
 aside {
     grid-area: aside;
@@ -144,3 +96,5 @@ section {
 footer {
     grid-area: footer;
 }
+
+@import 'pseudoclases', 'grids';
