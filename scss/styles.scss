@@ -42,8 +42,8 @@ header {
     margin-left: 60px;
 }
 
-aside {
-    grid-area: aside;
+main {
+    grid-area: main;
 }
 
 .dropdown-menu {
@@ -54,14 +54,6 @@ aside {
 .categoria {
     text-decoration: none;
     outline: 0;
-}
-
-.peli_seri1 {
-    grid-area: peli_seri1
-}
-
-.peli_seri2 {
-    grid-area: peli_seri2
 }
 
 .poster {
@@ -95,6 +87,7 @@ section {
 
 footer {
     grid-area: footer;
+    background-color: #240952;
 }
 
 @import 'pseudoclases', 'grids';
