@@ -4,7 +4,7 @@
 <head>
     <title>Kinetoscope - ¡Bienvenido a nuestra plataforma de streaming de entretenimiento!</title>
     <meta charset="UTF-8">
-    <meta name="description=" content="Bienvenido a Mi Lista, tu selección personalizada de entretenimiento en un solo lugar. Aquí encontrarás todas las películas y series que has marcado como favoritas.">
+    <meta name="description=" content="Bienvenido al apasionante mundo de las series. Sumérgete en historias que te atraparán desde el primer episodio.">
     <meta name="keywords" content="Plateforma de streaming, Películas, Series, Catalogo, Maraton, Ver en línea, Contenido variado">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Favicon-->
@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--CSS-->
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Mi lista - Kinetoscope</title>
+    <!--JS-->
+    <script src="../js/suscripcion.js"></script>
+    <title>Suscripción - Kinetoscope</title>
 </head>
 
 <body>
@@ -36,13 +38,13 @@
                                 <a href="../index.html" class="estilo-links">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="estilo-links">Mi lista</a>
+                                <a href="./mi_lista.html" class="estilo-links">Mi lista</a>
                             </li>
                             <li class="nav-item">
                                 <a href="./peliculas.html" class="estilo-links">Películas</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./series.html" class="estilo-links">Series</a>
+                                <a href="#" class="estilo-links">Series</a>
                             </li>
                             <li class="nav-item">
                                 <a href="./sobre_nosotros.html" class="estilo-links">Sobre Nosotros</a>
@@ -59,17 +61,46 @@
         </header>
 
         <main>
-            <div>
-                <img class="poster" src="../assets/images/cowboy_bebop.jpg" alt="Cowboy Bebop Anime">
-                <img class="poster" src="../assets/images/back_future.jpg" alt="Back to the Future">
-                <img class="poster" src="../assets/images/castlevania.jpg" alt="Castlevania Series">
-                <img class="poster" src="../assets/images/sherk2.jpg" alt="Sherk 2">
-                <img class="poster" src="../assets/images/gotg3.jpg" alt="Guardianes de la Galaxia Vol. 3">
-                <img class="poster" src="../assets/images/breaking_bad.jpeg" alt="Breaking Bad">
-                <img class="poster" src="../assets/images/tronlegacy.jpeg" alt="Tron Legacy">
-            </div>
+            <section>
+                <article>
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <!-- Elementos HTML para la interfaz del usuario -->
+                    <label for="monto">Monto:</label>
+                    <input type="number" id="monto"><br>
+                    <label for="cuotas">Cuotas:</label>
+                    <input type="number" id="cuotas"><br>
+                    <button onclick="calcular()">Calcular</button><br>
+                    <p>El monto por cuota es: <span id="montoCuota"></span></p>
+                    <p>El monto final es: <span id="montoFinal"></span></p>
+                </article>
+            </section>
         </main>
-        
+
         <footer class="text-center text-white">
             <div class="container">
                 <section class="mt-5">
