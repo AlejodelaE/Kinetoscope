@@ -85,6 +85,14 @@ section {
     font-weight: bold;
 }
 
+.planes {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 footer {
     grid-area: footer;
     background-color: #240952;
