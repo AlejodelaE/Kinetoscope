@@ -74,7 +74,7 @@
                                 Accede a una selección impresionante de películas y series en alta definición. Ideal para aquellos que buscan una experiencia de 
                                 visualización de alta calidad a un precio asequible.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <button onclick="suscribirse(0, prompt('Elige un número de cuotas de 1 a 36:'))" class="btn btn-danger">Plan Básico 7.99$</button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -85,7 +85,7 @@
                                 Disfruta de todas las ventajas del Plan Básico, además de la posibilidad de transmitir en dos dispositivos simultáneamente. 
                                 Perfecto para parejas o familias que desean compartir la diversión.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <button onclick="suscribirse(1, prompt('Elige un número de cuotas de 1 a 36:'))" class="btn btn-danger">Plan Estándar 10.99$</button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -96,19 +96,21 @@
                                 Disfruta de contenido en ultra alta definición y la capacidad de transmitir en hasta cuatro dispositivos al mismo tiempo. 
                                 Además, accede a contenido exclusivo y estrenos anticipados. La elección definitiva para los amantes del entretenimiento en su máxima expresión.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <button onclick="suscribirse(2, prompt('Elige un número de cuotas de 1 a 36:'))" class="btn btn-danger">Plan Premium 13.99$</button>
                         </div>
                     </div>
-                </article>
-                <article>
-                    <!-- Elementos HTML para la interfaz del usuario -->
-                    <label for="monto">Monto:</label>
-                    <input type="number" id="monto"><br>
-                    <label for="cuotas">Cuotas:</label>
-                    <input type="number" id="cuotas"><br>
-                    <button onclick="calcular()">Calcular</button><br>
-                    <p>El monto por cuota es: <span id="montoCuota"></span></p>
-                    <p>El monto final es: <span id="montoFinal"></span></p>
+                    <div class="card" style="width: 18rem;">
+                        <img src="../assets/images/plan1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Búsqueda de Planes</h5>
+                            <p class="card-text">Utiliza esta función para encontrar información detallada sobre nuestros diferentes 
+                                planes de suscripción. Simplemente haz clic en el botón y proporciona el nombre del plan que te interesa. 
+                                Te mostraremos el nombre y el precio correspondiente. Si no encontramos el plan, te lo haremos saber. 
+                                ¡Explora nuestras opciones de suscripción ahora!"
+                            </p>
+                            <button onclick="buscarPlan(prompt('Ingrese el nombre del plan'))" class="btn btn-info">Buscar Plan</button>
+                        </div>
+                    </div>
                 </article>
             </section>
         </main>
