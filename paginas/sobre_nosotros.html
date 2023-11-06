@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--CSS-->
     <link rel="stylesheet" href="../css/styles.css">
+    <!--JS-->
+    <script src="../js/formulario.js"></script>
     <title>Sobre Nosotros - Kinetoscope</title>
 </head>
 
@@ -117,8 +119,20 @@
                 </div>
                 <div class="col-12">
                     <button type="reset" class="btn btn-danger">Borrar Formulario</button>
-                </div>
+                </div>            
             </form>
+            <div id="resultados" class="card" style="width: 25rem;">
+                <h1>Resultados</h1>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Nombre: <span id="result_nombre" class="text-body-tertiary"></span></li>
+                    <li class="list-group-item">Apellido: <span id="result_apellido" class="text-body-tertiary"></span></li>
+                    <li class="list-group-item">Correo Electrónico: <span id="result_correo" class="text-body-tertiary"></span></li>
+                    <li class="list-group-item">País: <span id="result_pais" class="text-body-tertiary"></span></li>
+                    <li class="list-group-item">Ciudad: <span id="result_ciudad" class="text-body-tertiary"></span></li>
+                    <li class="list-group-item">Opinión 1: <span id="result_opinion1" class="text-body-tertiary"></span></li>
+                    <li class="list-group-item">Opinión 2: <span id="result_opinion2" class="text-body-tertiary"></span></li>
+                </ul>
+            </div>  
         </main>
 
         <footer class="text-center text-white">
