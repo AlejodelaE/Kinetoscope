@@ -1,33 +1,39 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Cuando el documento HTML ha sido completamente cargado y parseado, ejecuta esta función.
+// Se ejecuta cuando el documento HTML ha sido completamente cargado y parseado.
+document.addEventListener('DOMContentLoaded', function () {
 
     // Obtener referencias a los elementos del DOM
-    const form = document.querySelector('.row.g-3'); // Selecciona el formulario
-    const inputName = document.getElementById('input_name'); // Selecciona el input de nombre
-    const inputLastname = document.getElementById('input_lastname'); // Selecciona el input de apellido
-    const inputEmail = document.getElementById('inputEmail'); // Selecciona el input de correo electrónico
-    const inputCountry = document.getElementById('inputCountry'); // Selecciona el input de país
-    const inputCity = document.getElementById('inputCity'); // Selecciona el input de ciudad
-    const opinion1 = document.getElementById('FormOpinion1'); // Selecciona el textarea de opinión 1
-    const opinion2 = document.getElementById('FormOpinion2'); // Selecciona el textarea de opinión 2
-    const submitButton = document.querySelector('button[type="submit"]'); // Selecciona el botón de enviar
-    const resetButton = document.querySelector('button[type="reset"]'); // Selecciona el botón de resetear
+    const form = document.querySelector('.row.g-3');
+    const inputName = document.getElementById('input_name');
+    const inputLastname = document.getElementById('input_lastname');
+    const inputEmail = document.getElementById('inputEmail');
+    const inputCountry = document.getElementById('inputCountry');
+    const inputCity = document.getElementById('inputCity');
+    const opinion1 = document.getElementById('FormOpinion1');
+    const opinion2 = document.getElementById('FormOpinion2');
+    const submitButton = document.querySelector('button[type="submit"]');
+    const resetButton = document.querySelector('button[type="reset"]');
 
     // Cargar datos del localStorage al cargar la página
-    const storedData = JSON.parse(localStorage.getItem('formData')); // Intenta obtener datos del localStorage
+    const storedData = JSON.parse(localStorage.getItem('formData'));
     if (storedData) {
-        // Si hay datos almacenados en el localStorage
-        inputName.value = storedData.name || ''; // Asigna el valor del nombre (o un string vacío si no existe) al input
-        inputLastname.value = storedData.lastname || ''; // Asigna el valor del apellido (o un string vacío si no existe) al input
-        inputEmail.value = storedData.email || ''; // Asigna el valor del correo electrónico (o un string vacío si no existe) al input
-        inputCountry.value = storedData.country || ''; // Asigna el valor del país (o un string vacío si no existe) al input
-        inputCity.value = storedData.city || ''; // Asigna el valor de la ciudad (o un string vacío si no existe) al input
-        opinion1.value = storedData.opinion1 || ''; // Asigna el valor de la opinión 1 (o un string vacío si no existe) al textarea
-        opinion2.value = storedData.opinion2 || ''; // Asigna el valor de la opinión 2 (o un string vacío si no existe) al textarea
+        // Si hay datos almacenados en el localStorage, asigna esos valores a los campos del formulario
+        inputName.value = storedData.name || '';
+        inputLastname.value = storedData.lastname || '';
+        inputEmail.value = storedData.email || '';
+        inputCountry.value = storedData.country || '';
+        inputCity.value = storedData.city || '';
+        opinion1.value = storedData.opinion1 || '';
+        opinion2.value = storedData.opinion2 || '';
     }
+
+    // Obtén tus credenciales de Email JS
+    const emailJsUserId = 'V1R7l_ls0MrGh3gnO';
+    const emailJsServiceId = 'service_3e7pg9s';
+    const emailJsTemplateId = 'template_ulibina';
 
     // Función para guardar datos en localStorage
     function saveData() {
+        // Crea un objeto con los datos del formulario y lo guarda en el localStorage
         const formData = {
             name: inputName.value,
             lastname: inputLastname.value,
@@ -37,20 +43,20 @@ document.addEventListener('DOMContentLoaded', function() {
             opinion1: opinion1.value,
             opinion2: opinion2.value
         };
-        localStorage.setItem('formData', JSON.stringify(formData)); // Convierte el objeto a JSON y lo guarda en el localStorage
+        localStorage.setItem('formData', JSON.stringify(formData));
     }
 
     // Función para mostrar los datos en el DOM
     function mostrarDatos() {
-        const resultNombre = document.getElementById('result_nombre'); // Selecciona el elemento para mostrar el nombre
-        const resultApellido = document.getElementById('result_apellido'); // Selecciona el elemento para mostrar el apellido
-        const resultCorreo = document.getElementById('result_correo'); // Selecciona el elemento para mostrar el correo electrónico
-        const resultPais = document.getElementById('result_pais'); // Selecciona el elemento para mostrar el país
-        const resultCiudad = document.getElementById('result_ciudad'); // Selecciona el elemento para mostrar la ciudad
-        const resultOpinion1 = document.getElementById('result_opinion1'); // Selecciona el elemento para mostrar la opinión 1
-        const resultOpinion2 = document.getElementById('result_opinion2'); // Selecciona el elemento para mostrar la opinión 2
+        // Selecciona elementos en el DOM y asigna los valores de los campos del formulario
+        const resultNombre = document.getElementById('result_nombre');
+        const resultApellido = document.getElementById('result_apellido');
+        const resultCorreo = document.getElementById('result_correo');
+        const resultPais = document.getElementById('result_pais');
+        const resultCiudad = document.getElementById('result_ciudad');
+        const resultOpinion1 = document.getElementById('result_opinion1');
+        const resultOpinion2 = document.getElementById('result_opinion2');
 
-        // Asigna los valores de los elementos a partir de los inputs y textareas
         resultNombre.textContent = inputName.value;
         resultApellido.textContent = inputLastname.value;
         resultCorreo.textContent = inputEmail.value;
@@ -60,16 +66,62 @@ document.addEventListener('DOMContentLoaded', function() {
         resultOpinion2.textContent = opinion2.value;
     }
 
+    // Función para enviar el formulario mediante Email JS
+    async function enviarCorreo() {
+        try {
+            // Realiza una solicitud POST a la API de Email JS con los datos del formulario
+            const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${emailJsUserId}`
+                },
+                body: JSON.stringify({
+                    service_id: emailJsServiceId,
+                    template_id: emailJsTemplateId,
+                    user_id: emailJsUserId,
+                    template_params: {
+                        name: inputName.value,
+                        lastname: inputLastname.value,
+                        email: inputEmail.value,
+                        country: inputCountry.value,
+                        city: inputCity.value,
+                        opinion1: opinion1.value,
+                        opinion2: opinion2.value
+                    }
+                })
+            });
+
+            if (response.ok) {
+                console.log('Correo enviado con éxito');
+            } else {
+                console.error('Error al enviar el correo');
+            }
+        } catch (error) {
+            console.error('Error en la petición fetch:', error);
+        }
+    }
+
+    // Función para mostrar un mensaje de éxito con SweetAlert
+    function mostrarMensajeExitoso() {
+        Swal.fire({
+            icon: 'success',
+            title: 'Formulario enviado',
+            text: '¡Gracias por enviar el formulario!'
+        });
+    }
+
     // Evento de envío del formulario
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', async function (event) {
         event.preventDefault(); // Previene el comportamiento por defecto del formulario (no se recargará la página)
         saveData(); // Guarda los datos en el localStorage
         mostrarDatos(); // Muestra los datos en el DOM
-        alert('Formulario enviado correctamente.'); // Muestra un mensaje de alerta
+        await enviarCorreo(); // Llama a la función para enviar el correo de manera asíncrona
+        mostrarMensajeExitoso(); // Muestra un mensaje de éxito con SweetAlert
     });
 
     // Evento de reset del formulario
-    form.addEventListener('reset', function() {
+    form.addEventListener('reset', function () {
         localStorage.removeItem('formData'); // Elimina los datos del localStorage
     });
 });
