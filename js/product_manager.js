@@ -1,8 +1,8 @@
 const fs = require('fs');
 
 class ProductManager {
-    constructor() {
-        this.filePath = 'products.json';
+    constructor(path) {
+        this.path = path;
         this.loadProducts();
     }
 
@@ -12,7 +12,7 @@ class ProductManager {
 
     loadProducts() {
         try {
-            const data = fs.readFileSync(this.filePath, 'utf-8');
+            const data = fs.readFileSync(this.path, 'utf-8');
             this.products = JSON.parse(data);
         } catch (error) {
             this.products = [];
@@ -20,7 +20,7 @@ class ProductManager {
     }
 
     saveProducts() {
-        fs.writeFileSync(this.filePath, JSON.stringify(this.products, null, 2), 'utf-8');
+        fs.writeFileSync(this.path, JSON.stringify(this.products, null, 2), 'utf-8');
     }
 
     getProducts() {
@@ -101,8 +101,11 @@ class ProductManager {
     }
 }
 
-// Crear una instancia de ProductManager
-const productManager = new ProductManager();
+// Ruta del archivo de productos
+const filePath = 'products.json';
+
+// Crear una instancia de ProductManager con la ruta especificada
+const productManager = new ProductManager(filePath);
 
 // Agregar los planes Básico, Estándar y Premium como productos
 productManager.addProduct({
