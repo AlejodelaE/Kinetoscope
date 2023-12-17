@@ -108,7 +108,7 @@ class ProductManager {
 }
 
 // Ruta del archivo de productos
-const filePath = 'products.json';
+const filePath = './products.json';
 
 // Crear una instancia de ProductManager con la ruta especificada
 const productManager = new ProductManager(filePath);
@@ -130,7 +130,7 @@ const productManager = new ProductManager(filePath);
         description: "Acceso estándar a servicios",
         price: 10.99,
         thumbnail: "thumbnail_estandar.jpg",
-        code: "STANDARD", // Agregar este campo con el código correcto
+        code: "STANDARD",
         stock: 100
     });
 
@@ -189,3 +189,5 @@ const productManager = new ProductManager(filePath);
     const productsAfterDeletion = await productManager.getProducts();
     console.log("Lista actualizada de productos después de la eliminación:", productsAfterDeletion);
 })();
+
+module.exports = ProductManager;

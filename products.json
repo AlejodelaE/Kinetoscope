@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Plan Premium",
+    "description": "Acceso premium a servicios",
+    "price": 13.99,
+    "thumbnail": "thumbnail_premium.jpg",
+    "code": "PREMIUM",
+    "stock": 100,
+    "id": "_2itjrneio"
+  }
+]
